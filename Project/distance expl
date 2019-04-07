@@ -1,0 +1,6 @@
+## 3. Explanation of distance 
+There are three possible operation to be performed: deletion, insertion or substitution. The first one corresponds to the distance of the cell above, inserion to the cell on the left hand side and the last one to the cell backward diagonal plus the cost of letters being equal or not. 
+
+If current letters are the same it would be sufficient to compare the two previous substrings (diagonal backward) and it would be the same value.
+
+Deletion and subsitution are opposite operations. If we are in the i,j cell,we have string a with i characters and string b with j.If we move to the left, this  would mean comparing a' with i-1 characters with b. Therefore, we would have to INSERT a new character. If we move one cell upwards we will be comparing a with b' (j-1) characters. Therefore, we wouldhave to DELETE a character from a to get to b'. If we move one cell diagonal backwards we are comparing a' (i-1) with b' (j-1)  then we do not need to delete or insert anything, just to SUBSTITUTE. 
